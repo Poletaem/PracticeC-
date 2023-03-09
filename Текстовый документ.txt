@@ -1,9 +1,0 @@
-nt sum_otr = 0;
-    int sum_pol = 0;
-    for (int i = 0; i < size; i++){
-        if (arr[i]>0){
-            sum_pol += arr[i];
-        }else{
-            sum_otr += arr[i];
-        }
-    }
