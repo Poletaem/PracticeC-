@@ -3,12 +3,12 @@
 
 void Fib(int a)
 {
-    int festNum = 0;
-    int secontNum = 1;
+    int ferstNum = 0;
+    int secondNum = 1;
     for (int i = 0; i < a; i++)
     {
-        Console.Write(festNum + " ");
-        (festNum, secontNum) = (secontNum, festNum + secontNum);
+        Console.Write(ferstNum + " ");
+        (ferstNum, secondNum) = (secondNum, ferstNum + secondNum);
     }
 }
 int A = int.Parse(Console.ReadLine()!);
