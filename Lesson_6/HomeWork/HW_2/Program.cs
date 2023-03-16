@@ -2,9 +2,6 @@
 //b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 
-void Point(double B1, double K1, double B2, double K2)
-
-{
 Console.WriteLine("введите значение b1");
 double b1 = int.Parse(Console.ReadLine()!);
 
@@ -17,6 +14,10 @@ double b2 = int.Parse(Console.ReadLine()!);
 Console.WriteLine("введите число k2");
 double k2 = int.Parse(Console.ReadLine()!);
 
+
+void Point(double B1, double K1, double B2, double K2)
+
+{
 double x = (b2 - b1) / (k1 - k2);
 double y = (k1 * (b2 - b1)) / (k1 - k2) + b1;
 
