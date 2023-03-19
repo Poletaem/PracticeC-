@@ -37,16 +37,7 @@ arr[i, j] = arr[i,j] * arr[i, j];
 
 }
 
-int row_num = int.Parse(Console.ReadLine()!);
-int column_num = int.Parse(Console.ReadLine()!);
-int start = int.Parse(Console.ReadLine()!);
-int stop = int.Parse(Console.ReadLine()!);
 
-int[,] mass = MassNums(row_num, column_num, start, stop);
-Print(mass);
-EvenPos(mass);
-
-Print(mass);
 
 
 
