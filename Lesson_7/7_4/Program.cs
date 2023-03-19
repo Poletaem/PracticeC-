@@ -27,16 +27,16 @@ int[,] MassNums(int row, int column, int from, int to)
 
 string SearchNum(int[,] arr, int num)
 {
-int row = arr.GetLength(0);
-int column = arr.GetLength(1);
+    int row = arr.GetLength(0);
+    int column = arr.GetLength(1);
 
 
-for (int i = 0; i < row; i++)
-for (int j = 0; j < column; j++)
+    for (int i = 0; i < row; i++)
+        for (int j = 0; j < column; j++)
 
-if (arr[i,j] == num)
-return $"[{i+1},{j+1}]";
-return "Такого числа нет";
+            if (arr[i, j] == num)
+                return $"[{i + 1},{j + 1}]";
+    return "Такого числа нет";
 
 
 }
