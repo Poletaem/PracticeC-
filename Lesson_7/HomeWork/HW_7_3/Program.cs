@@ -1,10 +1,10 @@
-﻿//Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
-//и возвращает значение этого элемента или же указание, что такого элемента нет.
+﻿//. Задайте двумерный массив из целых чисел.
+// Найдите среднее арифметическое элементов в каждом столбце.
 //Например, задан массив:
 //1 4 7 2
 //5 9 2 3
 //8 4 2 4
-
+//Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 void Print(int[,] arr)
 {
@@ -20,7 +20,7 @@ void Print(int[,] arr)
      Console.WriteLine();
 }
 
-int[,] MassNums(int row, int column, int from, int to)
+int[,] FillMass(int row, int column, int from, int to)
 {
     int[,] arr = new int[row, column];
 
@@ -40,29 +40,30 @@ int start = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите конец диапазона:    ");
 int stop = int.Parse(Console.ReadLine()!);
 
-int[,] mass = MassNums(row_num, column_num, start, stop);
+int[,] mass = FillMass(row_num, column_num, start, stop);
+Console.WriteLine();
 Print(mass);
 
 
-Console.WriteLine("Введите строку элемента:    ");
-int Row = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите столбец элемента:    ");
-int Col = int.Parse(Console.ReadLine()!);
-Console.WriteLine();
+double Averege(int[,]Arr)
+{
+    int row = Arr.GetLength(0);
+    int column = Arr.GetLength(1);
+    double avr = 0;
 
+    for (int j = 0; j < row; j++)
 
-string SearchElement(int[,]Arr, int I, int J)
+        for (int i = 0; i < column; i++)
+        {
+            avr = avr + Arr[i, j];
 
-{int row = Arr.GetLength(0);
-int column = Arr.GetLength(1);
+        }
 
+    avr = Math.Round(avr / row_num, 2);
 
-
-        if( I >  row || J > column)
-           return "Элемента с такой позицией нет";
-
- return $"{Arr[I-1,J-1]}";
+    return avr;
 }
 
-string result = SearchElement(mass, Row, Col);
+
+double result = Averege(mass);
 Console.WriteLine(result);

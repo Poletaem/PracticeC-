@@ -28,12 +28,12 @@ int[,] MassNums(int row, int column, int from, int to)
 
 void EvenPos(int[,] arr)
 {
-int row = arr.GetLength(0);
-int column = arr.GetLength(1);
+    int row = arr.GetLength(0);
+    int column = arr.GetLength(1);
 
-for (int i = 1; i < row; i+=2)
-for (int j = 1; j < column; j+=2)
-arr[i, j] = arr[i,j] * arr[i, j];
+    for (int i = 1; i < row; i += 2)
+        for (int j = 1; j < column; j += 2)
+            arr[i, j] = arr[i, j] * arr[i, j];
 
 }
 
