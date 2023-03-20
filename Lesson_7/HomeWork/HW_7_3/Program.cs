@@ -45,25 +45,27 @@ Console.WriteLine();
 Print(mass);
 
 
-double Averege(int[,]Arr)
+void Averege(int[,]Arr)
 {
     int row = Arr.GetLength(0);
     int column = Arr.GetLength(1);
     double avr = 0;
 
-    for (int j = 0; j < row; j++)
+    for (int j = 0; j < column; j++)
+    {   avr = 0;
 
-        for (int i = 0; i < column; i++)
+        for (int i = 0; i < row; i++)
         {
             avr = avr + Arr[i, j];
 
         }
 
     avr = Math.Round(avr / row_num, 2);
-
-    return avr;
+    Console.Write($" {avr};  ");
+    }
+   
 }
 
 
-double result = Averege(mass);
-Console.WriteLine(result);
+Averege(mass);
+
